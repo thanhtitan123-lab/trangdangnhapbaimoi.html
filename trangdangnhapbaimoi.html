@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    /* Khung login chính giữa màn hình */
+    .login-container {
+      max-width: 500px;
+      margin: 50px auto; 
+      background-color: white;
+      border: 1px solid #e3e3e3;
+      border-radius: 4px;
+      padding: 30px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    /* Tiêu đề */
+    .title-software {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    .title-main {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.4;
+      margin-bottom: 25px;
+    }
+
+    /* Input group tùy chỉnh để icon nằm bên phải giống hình mẫu */
+    .input-group {
+      margin-bottom: 15px;
+    }
+    .input-group .form-control {
+      height: 45px;
+      font-size: 15px;
+    }
+    .input-group-addon {
+      background-color: #eeeeee;
+      color: #555;
+    }
+
+    /* Căn chỉnh hàng checkbox và nút Đăng nhập */
+    .remember-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .remember-row .checkbox {
+      margin: 0;
+    }
+    .remember-row label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .btn-login {
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      padding: 8px 30px;
+      border: none;
+    }
+    .btn-login:hover {
+      background-color: #0069d9;
+      color: white;
+    }
+
+    /* Các nút đăng nhập bằng mail phía dưới */
+    .btn-oauth {
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      border: none;
+      font-weight: 500;
+    }
+    .btn-microsoft {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-microsoft:hover {
+      background-color: #0069d9;
+      color: white;
+    }
+    .btn-tvu {
+      background-color: #dc3545;
+      color: white;
+    }
+    .btn-tvu:hover {
+      background-color: #c82333;
+      color: white;
+    }
+
+    /* Quên mật khẩu */
+    .forgot-password {
+      margin-top: 15px;
+      font-size: 15px;
+    }
+    .forgot-password a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">   
+  <div class="login-container">
+    
+    <div class="text-center">
+      <img src="https://i.postimg.cc/cJRrRcB8/TVU-RGB.png" alt="TVU Logo" width="130" height="130"> 
+    </div>
+    
+    <div class="text-center">
+      <h1 class="title-software">PHẦN MỀM TIN HỌC</h1>
+      <h2 class="title-main">ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CHO SINH VIÊN CHÍNH QUY<br>TẠI ĐẠI HỌC TRÀ VINH</h2>
+    </div>
+
+    <form action="/action_page.php" method="POST">
+      
+      <div class="input-group">
+        <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>   
+      </div>
+      
+      <div class="input-group">
+        <input id="password" type="password" class="form-control" name="password" placeholder="Mật khẩu">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+      </div>
+      
+      <div class="remember-row">
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
+        </div>
+        <button type="submit" class="btn btn-login">Đăng nhập</button>
+      </div>
+
+    </form>
+    
+    <button type="button" class="btn btn-block btn-oauth btn-microsoft">Sinh viên (Đăng nhập bằng Email Microsoft)</button>
+    <button type="button" class="btn btn-block btn-oauth btn-tvu">Giảng viên (Đăng nhập bằng Email TVU)</button>
+    
+    <div class="forgot-password">
+      <a href="#">Quên mật khẩu?</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
